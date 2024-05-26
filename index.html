@@ -274,6 +274,13 @@
     </style>
 </head>
 
+    <script>
+                function toggleMenu() {
+                    var menuItems = document.getElementById('menuItems');
+                    menuItems.classList.toggle('active');
+                }
+            </script>
+
 <body>
     <video autoplay muted loop class="video-background">
         <source src="video-de-fundo.mp4" type="video/mp4">
@@ -642,13 +649,6 @@
             <div class="footer-bottom">
                 <p>&copy; 2024 HotDog - All rights reserved.</p>
             </div>
-
-    <script> 
-function toggleMenu() {
-    const menuItems = document.getElementById('menuItems');
-    menuItems.classList.toggle('active');
-}
-</script>
     
         </footer>
 </body>
