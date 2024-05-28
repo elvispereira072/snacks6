@@ -14,7 +14,7 @@
             padding: 0;
             font-family: Arial, sans-serif;
             color: #fff;
-            background-color:orangered;
+            background-color: orangered;
             overflow-x: hidden;
             height: 100%;
         }
@@ -74,6 +74,7 @@
         nav a:hover {
             color: #fff;
             background-color: rgba(255, 255, 255, 0.2);
+            ;
             border-radius: 5px;
             padding: 5px;
         }
@@ -146,14 +147,20 @@
             }
         }
 
-         .product{
-        background-color:rgba(5, 5, 5, 0.089);
-       }
-        
+        .product {
+            background-color: rgba(5, 5, 5, 0.089);
+        }
+
         .product img {
             max-width: 100%;
         }
-        
+
+        footer {
+            background: rgba(5, 5, 5, 0.089);
+            padding: 10px;
+            text-align: center;
+        }
+
         @media (max-width: 480px) {
             .content {
                 padding: 10px;
@@ -222,7 +229,7 @@
 
         .rating {
             font-size: 24px;
-            color: gold;
+            color: rgba(5, 5, 5, 0.089);
             /* Cor das estrelas */
         }
 
@@ -247,7 +254,7 @@
 
         .rating {
             font-size: 24px;
-            color: gold;
+            color: yellow;
             /* Cor das estrelas */
         }
 
@@ -270,18 +277,37 @@
             /* Código Unicode da estrela preenchida */
         }
 
-         footer {
-            background: rgba(0, 0, 0, 0.7);
-            padding: 10px;
-            text-align: center;
+        /* Video de fundo */
+        .background-video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            opacity: 0.7;
+            /* Ajuste a opacidade conforme necessário */
         }
 
-            #special-offers,
+        footer {
+            background-color: rgba(5, 5, 5, 0.089);
+            ;
+            /* Cor de fundo do footer (preto, por exemplo) */
+            color: #fff;
+            /* Cor do texto (branco) */
+            text-align: center;
+            /* Centralizar texto */
+            padding: 20px;
+            /* Espaçamento interno */
+        }
+
+        #special-offers,
         #faq,
         #contact {
             background-color: rgba(5, 5, 5, 0.089);
         }
-
     </style>
 </head>
 
@@ -293,7 +319,13 @@
 </script>
 
 <body>
-   <nav class="content">
+    <!-- Video de fundo -->
+    <video class="background-video" autoplay muted loop playsinline>
+        <source src="assets/fruta.mp4" type="video/mp4">
+        Seu navegador não suporta a tag de vídeo.
+    </video>
+
+    <nav class="content">
         <div class="menu-icon" onclick="toggleMenu()">
             <i class="fas fa-bars"></i>
         </div>
@@ -309,13 +341,6 @@
         </div>
     </nav>
     <script src="scripts.js"></script>
-
-    <video autoplay muted loop class="video-background">
-        <source src="assets/maquina.mp4" type="video/mp4">
-        Seu navegador não suporta a tag de vídeo.
-    </video>
-
-    <div class="overlay"></div>
 
     <div class="content">
         <section id="home">
@@ -637,33 +662,32 @@
                     <p>Monday - Sunday: 11:00 AM - 10:00 PM</p>
                 </div>
 
-                    <h3>Follow Us</h3>
-                    <div class="social-icons">
-                        <a href="https://www.facebook.com/hotdog"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://twitter.com/hotdog"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/hotdog"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/in/hotdog"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://t.me/hotdog"><i class="fab fa-telegram"></i></a>
-                        <a href="https://www.youtube.com/hotdog"><i class="fab fa-youtube"></i></a>
-                        <a href="https://wa.me/1234567890"><i class="fab fa-whatsapp"></i></a>
-                        <a href="https://m.me/hotdog"><i class="fab fa-facebook-messenger"></i></a>
-                        <a href="https://open.spotify.com/user/hotdog"><i class="fab fa-spotify"></i></a>
-                    </div>
-                </div>
-
-
-                <div class="footer-item">
-                    <h3>Delivery Area</h3>
-                    <p>We deliver within a 5 km radius.</p>
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/hotdog"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/hotdog"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/hotdog"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/hotdog"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://t.me/hotdog"><i class="fab fa-telegram"></i></a>
+                    <a href="https://www.youtube.com/hotdog"><i class="fab fa-youtube"></i></a>
+                    <a href="https://wa.me/1234567890"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://m.me/hotdog"><i class="fab fa-facebook-messenger"></i></a>
+                    <a href="https://open.spotify.com/user/hotdog"><i class="fab fa-spotify"></i></a>
                 </div>
             </div>
 
-            <div class="footer-bottom">
-                <p>&copy; 2024 HotDog - All rights reserved.</p>
-            </div>
 
-            
-    
-        </footer>
+            <div class="footer-item">
+                <h3>Delivery Area</h3>
+                <p>We deliver within a 5 km radius.</p>
+            </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2024 HotDog - All rights reserved.</p>
+    </div>
+
+    </footer>
 </body>
+
 </html>
